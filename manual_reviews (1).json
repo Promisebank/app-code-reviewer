@@ -1,0 +1,29 @@
+{
+  "_instructions": "Seed answer key. For an honest benchmark, review each snippet yourself FIRST (or ask a developer), then edit this file: add issues you spot, remove ones you disagree with, and fill manual_time_seconds with how long YOU took per snippet.",
+  "s01_sql_injection.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 6, "line_end": 6, "category": "security", "note": "SQL injection via f-string"},
+    {"line_start": 4, "line_end": 7, "category": "best_practices", "note": "connection never closed"}]},
+  "s02_mutable_default.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 1, "line_end": 1, "category": "bugs", "note": "mutable default argument"},
+    {"line_start": 6, "line_end": 6, "category": "bugs", "note": "ZeroDivisionError on empty list"}]},
+  "s03_nested_loops.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 3, "line_end": 6, "category": "efficiency", "note": "O(n^2) loops; use set or Counter"}]},
+  "s04_hardcoded_secret.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 3, "line_end": 3, "category": "security", "note": "hardcoded API key"},
+    {"line_start": 6, "line_end": 7, "category": "best_practices", "note": "no timeout, no status check, unencoded query params"}]},
+  "s05_poor_readability.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 1, "line_end": 1, "category": "readability", "note": "meaningless names, no docstring"},
+    {"line_start": 3, "line_end": 6, "category": "readability", "note": "nested ifs; list comprehension is clearer"}]},
+  "s06_bare_except.py": {"manual_time_seconds": null, "issues": [
+    {"line_start": 8, "line_end": 8, "category": "best_practices", "note": "bare except swallows all errors"},
+    {"line_start": 5, "line_end": 7, "category": "best_practices", "note": "file never closed; use with"}]},
+  "s07_loose_equality.js": {"manual_time_seconds": null, "issues": [
+    {"line_start": 2, "line_end": 2, "category": "bugs", "note": "loose == with string; inconsistent with line 5 comparison"}]},
+  "s08_xss.js": {"manual_time_seconds": null, "issues": [
+    {"line_start": 3, "line_end": 3, "category": "security", "note": "XSS via innerHTML"}]},
+  "s09_async_foreach.js": {"manual_time_seconds": null, "issues": [
+    {"line_start": 3, "line_end": 6, "category": "bugs", "note": "forEach does not await; returns empty array"}]},
+  "s10_var_closure.js": {"manual_time_seconds": null, "issues": [
+    {"line_start": 1, "line_end": 4, "category": "bugs", "note": "var closure prints 3,3,3; use let"}]},
+  "s11_clean_control.py": {"manual_time_seconds": null, "issues": []}
+}

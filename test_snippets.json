@@ -1,0 +1,13 @@
+{
+  "s01_sql_injection.py": "import sqlite3\n\ndef get_user(username):\n    conn = sqlite3.connect(\"app.db\")\n    cur = conn.cursor()\n    cur.execute(f\"SELECT * FROM users WHERE name = '{username}'\")\n    return cur.fetchone()\n",
+  "s02_mutable_default.py": "def add_item(item, items=[]):\n    items.append(item)\n    return items\n\ndef average(nums):\n    return sum(nums) / len(nums)\n",
+  "s03_nested_loops.py": "def find_duplicates(data):\n    dups = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j and data[i] == data[j] and data[i] not in dups:\n                dups.append(data[i])\n    return dups\n",
+  "s04_hardcoded_secret.py": "import requests\n\nAPI_KEY = \"YOUR_KEY_HERE\"\n\ndef fetch_price(coin):\n    r = requests.get(\"https://api.example.com/price?coin=\" + coin + \"&key=\" + API_KEY)\n    return r.json()[\"price\"]\n",
+  "s05_poor_readability.py": "def f(a, b, c):\n    x = []\n    for i in a:\n        if i > b:\n            if i < c:\n                x.append(i * 2)\n    return x\n",
+  "s06_bare_except.py": "import json\n\ndef load_config(path):\n    try:\n        f = open(path)\n        data = json.load(f)\n        return data\n    except:\n        return {}\n",
+  "s07_loose_equality.js": "function isAdult(age) {\n  if (age == \"18\") {\n    return true;\n  }\n  return age > 18;\n}\n",
+  "s08_xss.js": "function showComment(comment) {\n  const box = document.getElementById(\"comments\");\n  box.innerHTML += \"<p>\" + comment + \"</p>\";\n}\n",
+  "s09_async_foreach.js": "async function loadUsers(ids) {\n  const users = [];\n  ids.forEach(async (id) => {\n    const res = await fetch(\"/api/users/\" + id);\n    users.push(await res.json());\n  });\n  return users;\n}\n",
+  "s10_var_closure.js": "for (var i = 0; i < 3; i++) {\n  setTimeout(function () {\n    console.log(i);\n  }, 100);\n}\n",
+  "s11_clean_control.py": "def clamp(value, low, high):\n    \"\"\"Return value limited to the range [low, high].\"\"\"\n    if low > high:\n        raise ValueError(\"low must not exceed high\")\n    return max(low, min(value, high))\n"
+}

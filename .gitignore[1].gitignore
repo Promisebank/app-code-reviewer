@@ -1,0 +1,26 @@
+# Secrets - never upload these to GitHub
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Benchmark output (regenerated each run)
+benchmark/results.csv
+benchmark/summary.md
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
